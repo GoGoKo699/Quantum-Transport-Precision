@@ -151,7 +151,7 @@ Summing over components yields
 
 ```math
 V_0\geq\frac{2L}{9m^2}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The estimate adds the contributions of all conducting intervals. Splitting the transmission into several separated bands does not remove it.

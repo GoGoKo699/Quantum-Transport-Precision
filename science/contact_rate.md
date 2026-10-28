@@ -132,7 +132,7 @@ Taking the trace, with algebraic multiplicity and without requiring diagonalizab
 \sum_{j=1}^N|\Im \zeta_j|
 =-\Im \mathrm{tr}H_{\mathrm{eff}}
 =\frac{\Gamma_L+\Gamma_R}{2}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Let $`\eta_1,\ldots,\eta_N`$ be the roots of $`Q_L`$, also with algebraic multiplicity. They are the eigenvalues of
@@ -149,7 +149,7 @@ No half-plane restriction is assumed for these roots. Their trace gives
 \qquad
 \sum_{j=1}^N|\Im \eta_j|
 \geq\frac{|\Gamma_L-\Gamma_R|}{2}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Both sets of roots have the same real sum,
@@ -158,7 +158,7 @@ Both sets of roots have the same real sum,
 \Re \sum_j\zeta_j
 =\Re \sum_j\eta_j
 =\mathrm{tr}H.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 For $`N=1`$, the two endpoint contributions in each trace add on the same orbital. Equations (1)-(3) retain exactly the stated form.
@@ -181,7 +181,7 @@ Then the logarithm below is absolutely integrable, with the values at its finite
 \sum_j|\Im a_j|
 -\sum_j|\Im b_j|
 \right].
-\tag{4}
+\qquad\text{(4)}
 ```
 
 A common real root can be canceled first or treated by combining its logarithmic contributions. The result is the same.
@@ -195,7 +195,7 @@ First consider one root $`z=a+ib`$, with real $`a,b`$. Almost everywhere,
 =
 \log\!\left(1+\frac{b^2}{(E-a)^2}\right)
 +\log\frac{(E-a)^2}{E^2}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 The first term is nonnegative and integrable. For $`y\neq0`$,
@@ -214,7 +214,7 @@ Tonelli's theorem applies to this nonnegative integrand, giving
 \int_0^{|b|}
 \left(\int_{\mathbb R}\frac{2s}{y^2+s^2}\,dy\right)ds
 =2\pi|b|.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 The integrand at $`s=0`$ is irrelevant to the integral; for every $`s>0`$, the inner integral is $`2\pi`$. Equation (6) also covers $`b=0`$.
@@ -267,7 +267,7 @@ Apply the lemma to $`\chi_N`$ and $`Q_L`$, using (3). Equations (1) and (4) give
 \frac{\Gamma_L+\Gamma_R}{2}
 -\sum_{j=1}^N|\Im \eta_j|
 \right].}
-\tag{7}
+\qquad\text{(7)}
 ```
 
 This identity retains the contribution of every reflection zero, on either side of the real axis. In particular, it does not assume a minimum-phase reflection amplitude.
@@ -283,7 +283,7 @@ The triangle inequality (2) now yields
 \right]
 =
 2\pi\min(\Gamma_L,\Gamma_R).
-\tag{8}
+\qquad\text{(8)}
 ```
 
 For equal contacts $`\Gamma_L=\Gamma_R=\Gamma`$, equality in (8) holds exactly when all reflection zeros are real. For unequal contacts, equality holds exactly when all nonzero imaginary parts of the reflection zeros have the same sign. These statements concern the spectral bound (8); the convexity step below is a separate inequality.
@@ -341,7 +341,7 @@ Jensen's inequality is therefore applicable without a cutoff or an interchange o
 ```math
 \frac{\mathcal A}{I_0}
 \geq g(F)=\frac{\log(1/F)}{1-F}.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 Combining (8), (9), and $`I_0=2\pi J`$ proves
@@ -352,7 +352,7 @@ J\,\frac{\log(1/F)}{1-F}
 \leq \Gamma_{\min},
 \qquad
 \Gamma_{\min}:=\min(\Gamma_L,\Gamma_R).}
-\tag{10}
+\qquad\text{(10)}
 ```
 
 For any finite connected chain, transmission is nonconstant, and the probability measure $`\nu`$ has positive density everywhere. Strict convexity therefore makes (9) strict. Equation (10) is stated in weak form because it is a universal bound and is useful for limits of families.
@@ -364,7 +364,7 @@ For a prescribed target $`0<\varepsilon<1`$, achieving $`F\leq\varepsilon`$ requ
 ```math
 \frac{J}{\Gamma_{\min}}
 \leq\frac{1-\varepsilon}{\log(1/\varepsilon)}.
-\tag{11}
+\qquad\text{(11)}
 ```
 
 Equivalently, at fixed positive current and fixed contact rates, the Fano factor cannot approach zero merely by adding sites. A simpler, weaker explicit form of (10) is
@@ -378,7 +378,7 @@ If a family achieves the optimal size order $`F_N=\Theta(N^{-2})`$, then
 ```math
 \frac{J_N}{\Gamma_{\min,N}}
 \leq\frac{1+o(1)}{2\log N}.
-\tag{12}
+\qquad\text{(12)}
 ```
 
 The [Legendre family](legendre_family.md) attains this necessary logarithmic decrease in order. In the normalization where its reference interval is $`[-1,1]`$, that page proves
