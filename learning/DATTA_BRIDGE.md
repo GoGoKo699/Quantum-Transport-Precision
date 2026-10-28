@@ -75,7 +75,7 @@ Let $`K_t`$ count particles entering the drain during a stationary observation o
 ```math
 J=\lim_{t\to\infty}\frac{\mathbb E K_t}{t},
 \qquad
-D=\lim_{t\to\infty}\frac{\operatorname{Var}K_t}{t}.
+D=\lim_{t\to\infty}\frac{\mathrm{Var}K_t}{t}.
 ```
 
 For each occupied incoming energy mode, transmission has a Bernoulli contribution: its mean is $`T`$ and its variance is $`T(1-T)`$. Fermionic full counting statistics combines these contributions into the established generator

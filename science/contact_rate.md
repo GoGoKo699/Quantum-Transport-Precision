@@ -119,7 +119,7 @@ These formulas do not require equal contacts or reflection symmetry.
 Let $`\zeta_1,\ldots,\zeta_N`$ be the roots of $`\chi_N`$, counted with algebraic multiplicity. They are eigenvalues of $`H_{\mathrm{eff}}`$. For a nonzero right eigenvector $`v`$ with eigenvalue $`\zeta`$,
 
 ```math
-\operatorname{Im}\zeta
+\Im \zeta
 =-\frac{\Gamma_L|v_1|^2+\Gamma_R|v_N|^2}
 {2\|v\|^2}.
 ```
@@ -129,8 +129,8 @@ If the imaginary part were zero, both endpoint components would vanish. The eige
 Taking the trace, with algebraic multiplicity and without requiring diagonalizability, yields
 
 ```math
-\sum_{j=1}^N|\operatorname{Im}\zeta_j|
-=-\operatorname{Im}\operatorname{tr}H_{\mathrm{eff}}
+\sum_{j=1}^N|\Im \zeta_j|
+=-\Im \mathrm{tr}H_{\mathrm{eff}}
 =\frac{\Gamma_L+\Gamma_R}{2}.
 \tag{1}
 ```
@@ -144,10 +144,10 @@ H+\frac{i\Gamma_L}{2}\Pi_L-\frac{i\Gamma_R}{2}\Pi_R.
 No half-plane restriction is assumed for these roots. Their trace gives
 
 ```math
-\sum_{j=1}^N\operatorname{Im}\eta_j
+\sum_{j=1}^N\Im \eta_j
 =\frac{\Gamma_L-\Gamma_R}{2},
 \qquad
-\sum_{j=1}^N|\operatorname{Im}\eta_j|
+\sum_{j=1}^N|\Im \eta_j|
 \geq\frac{|\Gamma_L-\Gamma_R|}{2}.
 \tag{2}
 ```
@@ -155,9 +155,9 @@ No half-plane restriction is assumed for these roots. Their trace gives
 Both sets of roots have the same real sum,
 
 ```math
-\operatorname{Re}\sum_j\zeta_j
-=\operatorname{Re}\sum_j\eta_j
-=\operatorname{tr}H.
+\Re \sum_j\zeta_j
+=\Re \sum_j\eta_j
+=\mathrm{tr}H.
 \tag{3}
 ```
 
@@ -168,7 +168,7 @@ For $`N=1`$, the two endpoint contributions in each trace add on the same orbita
 **Lemma.** Let $`A`$ and $`B`$ be monic polynomials of the same degree, with roots $`a_j`$ and $`b_j`$ counted with multiplicity. Suppose
 
 ```math
-\operatorname{Re}\sum_j a_j=\operatorname{Re}\sum_j b_j.
+\Re \sum_j a_j=\Re \sum_j b_j.
 ```
 
 Then the logarithm below is absolutely integrable, with the values at its finitely many real zeros understood almost everywhere, and
@@ -178,8 +178,8 @@ Then the logarithm below is absolutely integrable, with the values at its finite
 \log\frac{|A(E)|^2}{|B(E)|^2}\,dE
 =
 2\pi\left[
-\sum_j|\operatorname{Im}a_j|
--\sum_j|\operatorname{Im}b_j|
+\sum_j|\Im a_j|
+-\sum_j|\Im b_j|
 \right].
 \tag{4}
 ```
@@ -241,7 +241,7 @@ It remains to check that this limit is the ordinary, absolutely convergent integ
 \log|A(E)|^2
 =
 2n\log|E|
--\frac{2\operatorname{Re}\sum_j a_j}{E}
+-\frac{2\Re \sum_j a_j}{E}
 +O(E^{-2}),
 ```
 
@@ -265,7 +265,7 @@ Apply the lemma to $`\chi_N`$ and $`Q_L`$, using (3). Equations (1) and (4) give
 =
 2\pi\left[
 \frac{\Gamma_L+\Gamma_R}{2}
--\sum_{j=1}^N|\operatorname{Im}\eta_j|
+-\sum_{j=1}^N|\Im \eta_j|
 \right].}
 \tag{7}
 ```
