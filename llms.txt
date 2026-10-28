@@ -1,0 +1,40 @@
+# Quantum Transport Precision
+
+> A scientific account of long-time particle-count precision and contact-limited current in finite coherent serial conductors, with explicit proofs, realizations, and reproducible checks.
+
+## Scientific question and conventions
+
+The model is a connected, noninteracting N-orbital nearest-neighbor chain with positive energy-independent endpoint rates, a fully occupied source, and an empty drain over the entire real energy axis. The unit convention is hbar = 1. N counts orbitals, not the many-body Hilbert-space dimension 2^N. J is particle current, D is the asymptotic count-variance rate, and F = D/J. Each physical contact rate enters the retarded Hamiltonian as -i Gamma/2.
+
+The proved optimal size order is F_N^star = Theta(N^-2). Every admissible chain satisfies F >= 1/(18N^2+2). The current-noise bound is J log(1/F)/(1-F) <= min(Gamma_L,Gamma_R). An explicit inherited Legendre-derivative filter has an exact N-site realization and, at a fixed common physical contact rate Gamma, attains J_N ~ Gamma/(3 log N). The universal leading constants are not claimed optimal.
+
+## Authoritative scientific sources by intent
+
+- [Overview](README.md): Main results, physical scope, figure, reading routes, and contact.
+- [Scientific reading map](science/README.md): Argument order and proof dependencies.
+- [Model, observables, and claims](science/model.md): Exact hypotheses, counting normalization, rate convention, and theorem statements.
+- [Universal size bound](science/size_bound.md): Constant serial transmission numerator, nonnegative polynomial, Markov endpoint strips, and the Fano lower bound.
+- [Legendre family and asymptotics](science/legendre_family.md): Inherited polynomial family, full-line noise estimate, nodal spacing, logarithmic contact rate, and asymptotic current.
+- [Physical realization](science/realization.md): Stable spectral factor, inner scattering matrix, positive Cayley residues, cyclic Jacobi construction, exact site count, and symmetry.
+- [Contact-rate theorem](science/contact_rate.md): Reflection determinants, logarithmic root integral, asymmetric contact bound, and transmitted-current-weighted Jensen inequality.
+- [Physical interpretation](science/interpretation.md): Resource rescaling, calibrated elapsed-time estimates, ordered limits, and boundaries of the conclusions.
+
+The science pages are the authority for claims and proofs. Numerical agreement checks the implementation; it does not establish the asymptotic laws. The long-time limit is taken separately at each finite N. The project does not prove an individual waiting-time variance, a size-uniform transient bound, or an extension to general graphs, interactions, structured reservoirs, finite bias, or finite temperature.
+
+## Educational route
+
+- [Learning entrypoint](learning/README.md): Concrete setting and routes by reading goal.
+- [Datta bridge](learning/DATTA_BRIDGE.md): The single educational anchor, verified chapter mapping, notation translation, single-orbital example, and locally supplied missing steps.
+- [30-milestone map](learning/MILESTONES.md): Fourteen background targets followed by sixteen narrative targets, with explicit earlier dependencies and authoritative source pointers.
+
+The educational anchor is Supriyo Datta, Electronic Transport in Mesoscopic Systems, Cambridge University Press (1995), DOI 10.1017/CBO9780511805776. Primary research references provide attribution and technical ingredients in addition to this one educational anchor.
+
+## Attribution and numerical evidence
+
+- [Related work](references/RELATED_WORK.md): Closest transport comparisons and credit for the classical least-squares filter, counting framework, polynomial inequality, and matching machinery.
+- [Bibliography](references/references.bib): Source identities, versions, and persistent identifiers.
+- [Verification and reproduction](verification/README.md): Pinned environment, commands, tested sizes, tolerances, and evidence boundaries.
+- [Filter and synthesis data](verification/data/filter_results.json): Physical realizations through N = 16 and polynomial quadrature through N = 128.
+- [Independent counting data](verification/data/counting_results.json): Eight full fermionic Lindblad/counting cases with N <= 4.
+
+Return to [README.md](README.md) for the repository's purpose and author contact.
