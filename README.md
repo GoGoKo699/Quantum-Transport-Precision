@@ -50,6 +50,14 @@ Start with the [model and exact claims](science/model.md), or use the [scientifi
 | Which results and techniques are inherited? | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 | How can the finite checks and figure be reproduced? | [Verification guide](verification/README.md) |
 
+## Learn the project
+
+The educational anchor is Supriyo Datta's *Electronic Transport in Mesoscopic Systems* (Cambridge University Press, 1995). Its treatment of transmission, scattering matrices, Green functions, and resonant tunneling provides the physical starting point.
+
+The [learning entrypoint](learning/README.md) connects that starting point to the complete result. The [Datta bridge](learning/DATTA_BRIDGE.md) maps verified chapters to the repository's notation, works through a single resonant level, and supplies the extra steps needed for the polynomial and contact-rate arguments. The [30-milestone map](learning/MILESTONES.md) has 14 background milestones followed by 16 milestones through the research narrative, with explicit dependencies and source pointers.
+
+For a compact guide by reading goal, see [llms.txt](llms.txt).
+
 ## Reproduce the checks
 
 With Python 3.12, create an environment and install the pinned dependencies:

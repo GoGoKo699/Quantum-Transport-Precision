@@ -89,7 +89,7 @@ This work establishes the physical filtering strategy and finite-chain low-noise
 
 ## Malvar and Calôba: the inherited least-squares filter
 
-H. S. Malvar and L. P. Calôba, *Least-squares low-pass filters with nonmonotonic response*, IEEE Transactions on Circuits and Systems **27**, 1270–1272 (1980), [DOI](https://doi.org/10.1109/TCS.1980.1084755), [author-provided original](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Malvar_Caloba.pdf), introduce the relevant least-squares family. Their $`Q_N^a`$ minimizes $`\int_0^1Q(x)^2\,dx`$ among degree-at-most-$`N`$ polynomials of parity $`N`$ with $`Q(1)=1`$. Their transfer magnitude has the form $`1/[1+\varepsilon^2Q(x)^2]`$.
+H. S. Malvar and L. P. Calôba, *Least-squares low-pass filters with nonmonotonic response*, IEEE Transactions on Circuits and Systems **27**, 1270–1272 (1980), [DOI](https://doi.org/10.1109/TCS.1980.1084755), [author-provided original](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Malvar_Caloba.pdf), introduce the relevant least-squares family. Their $`Q_N^a`$ minimizes $`\int_0^1Q(x)^2\,dx`$ among degree-at-most-$`N`$ polynomials of parity $`N`$ with $`Q(1)=1`$. Their squared transfer magnitude has the form $`1/[1+\varepsilon^2Q(x)^2]`$.
 
 The polynomial used here is exactly that $`Q_N^a`$ family, at $`\varepsilon=1`$, written in Legendre form:
 
