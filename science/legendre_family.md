@@ -141,7 +141,7 @@ d_N^\#(z)=\overline{d_N(\bar z)},
 with all zeros of $`d_N`$ in the lower half-plane and the same positive leading coefficient as $`p_N`$. Write those zeros as $`z_j`$ and define
 
 ```math
-c_N=-\sum_{j=1}^N\operatorname{Im}z_j>0.
+c_N=-\sum_{j=1}^N\Im z_j>0.
 ```
 
 The realization has equal physical contact rates

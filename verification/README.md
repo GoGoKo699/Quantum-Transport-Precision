@@ -54,15 +54,15 @@ Let $`\mathcal L`$ be the un-tilted generator, $`\mathcal J`$ the drain-jump sup
 ```math
 \mathcal L\rho_1=J\rho_0-\mathcal J\rho_0,
 \qquad
-\operatorname{tr}\rho_1=0.
+\mathrm{tr}\rho_1=0.
 ```
 
 Differentiating the tilted-generator eigenvalue equation gives
 
 ```math
-J=\operatorname{tr}(\mathcal J\rho_0),
+J=\mathrm{tr}(\mathcal J\rho_0),
 \qquad
-D=J+2\operatorname{tr}(\mathcal J\rho_1).
+D=J+2\mathrm{tr}(\mathcal J\rho_1).
 ```
 
 This calculation obtains the noise without using the transmission-noise integral. It is compared with direct Green-function quadrature, while the stationary covariance Lyapunov equation supplies a third calculation of the current.

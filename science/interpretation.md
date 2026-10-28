@@ -87,7 +87,7 @@ The current $`J`$ is the mean tick rate. Small $`F`$ describes correlations that
 A direct operational consequence can be stated for the calibrated elapsed-time estimate $`\widehat t=K_t/J`$. For each fixed finite chain in its long-time regime,
 
 ```math
-\operatorname{Var}\widehat t
+\mathrm{Var}\widehat t
 =\frac{F}{J}\,t+o(t).
 ```
 

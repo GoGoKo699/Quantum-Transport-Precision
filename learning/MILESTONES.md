@@ -18,7 +18,7 @@ Every dependency names an earlier milestone. The records describe conceptual und
 
 **Central question:** How can two particle streams have the same average output and different fluctuations?
 
-**Understanding target:** Distinguish the random accumulated count $`K_t`$ from its mean and variance, and understand $`J=\lim_{t\to\infty}\mathbb E K_t/t`$ and $`D=\lim_{t\to\infty}\operatorname{Var}K_t/t`$ as different long-time properties. A statement about accumulated counts need not determine the distribution of individual waiting times.
+**Understanding target:** Distinguish the random accumulated count $`K_t`$ from its mean and variance, and understand $`J=\lim_{t\to\infty}\mathbb E K_t/t`$ and $`D=\lim_{t\to\infty}\mathrm{Var}K_t/t`$ as different long-time properties. A statement about accumulated counts need not determine the distribution of individual waiting times.
 
 **Dependencies:** None.
 
@@ -524,7 +524,7 @@ Every dependency names an earlier milestone. The records describe conceptual und
 
 **Central question:** What precision is obtained when the contact strength is fixed and the output is used to estimate elapsed time?
 
-**Understanding target:** Compare fixed-passband and fixed-contact normalizations, using $`J_N/\Gamma\sim1/(3\log N)`$ after rescaling to equal fixed contacts. For the calibrated estimate $`\widehat t=K_t/J`$, understand $`\operatorname{Var}\widehat t=(F/J)t+o(t)`$ and the constructed coefficient $`F_N/J_N=\Theta(\log N/(\Gamma N^2))`$. Keep the finite-size long-time limit distinct from a size-uniform transient claim.
+**Understanding target:** Compare fixed-passband and fixed-contact normalizations, using $`J_N/\Gamma\sim1/(3\log N)`$ after rescaling to equal fixed contacts. For the calibrated estimate $`\widehat t=K_t/J`$, understand $`\mathrm{Var}\widehat t=(F/J)t+o(t)`$ and the constructed coefficient $`F_N/J_N=\Theta(\log N/(\Gamma N^2))`$. Keep the finite-size long-time limit distinct from a size-uniform transient claim.
 
 **Dependencies:** M01, M08, M14, M26, M28.
 

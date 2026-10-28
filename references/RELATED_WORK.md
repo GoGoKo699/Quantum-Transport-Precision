@@ -43,7 +43,7 @@ D=\frac{1}{2\pi}\int T(E)[1-T(E)]\,dE,
 F=D/J.
 ```
 
-Here $`D=\lim_{t\to\infty}\operatorname{Var}(K_t)/t`$ is a count-variance rate. A convention for symmetrized electrical noise can instead give $`S(0)=2e^2D`$, with electrical current $`I=eJ`$. In that convention the same dimensionless Fano factor is $`S(0)/(2eI)`$. The factor of two is a convention for the noise spectral density, not an additional fluctuation contribution.
+Here $`D=\lim_{t\to\infty}\mathrm{Var}(K_t)/t`$ is a count-variance rate. A convention for symmetrized electrical noise can instead give $`S(0)=2e^2D`$, with electrical current $`I=eJ`$. In that convention the same dimensionless Fano factor is $`S(0)/(2eI)`$. The factor of two is a convention for the noise spectral density, not an additional fluctuation contribution.
 
 Ya. M. Blanter and M. Büttiker, *Shot noise in mesoscopic conductors*, Physics Reports **336**, 1–166 (2000), [DOI](https://doi.org/10.1016/S0370-1573(99)00123-4), [author manuscript](https://arxiv.org/abs/cond-mat/9910158v2), review the scattering expressions and counting-statistics connection. None of these identities is claimed as a new transport formula.
 

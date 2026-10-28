@@ -37,7 +37,7 @@ The broad existence statement does not require real reflection zeros. The exact 
 The polynomial $`1+p(z)^2`$ is strictly positive on the real axis and has degree $`2N`$. Its nonreal zeros occur in conjugate pairs, counted with algebraic multiplicity. Define
 
 ```math
-d(z)=L\prod_{\substack{1+p(z_j)^2=0\\\operatorname{Im}z_j<0}}
+d(z)=L\prod_{\substack{1+p(z_j)^2=0\\\Im z_j<0}}
             (z-z_j).
 ```
 
@@ -118,7 +118,7 @@ A(h_j)=-p(h_j),\qquad B(h_j)^2=1.
 The residue is therefore
 
 ```math
-\operatorname{Res}_{z=h_j}K(z)
+\mathrm{Res}_{z=h_j}K(z)
 =\frac1{R'(h_j)}
 \begin{pmatrix}B(h_j)&-1\\-1&B(h_j)\end{pmatrix}
 =w_j
@@ -132,7 +132,7 @@ It has rank one. Strict positivity of $`w_j`$ follows because the residue is non
 Define
 
 ```math
-H_0=\operatorname{diag}(h_1,\ldots,h_N),\qquad
+H_0=\mathrm{diag}(h_1,\ldots,h_N),\qquad
 (b_L)_j=\sqrt{w_j},\qquad
 (b_R)_j=-B(h_j)\sqrt{w_j},\qquad
 W=(b_L,b_R).
@@ -246,7 +246,7 @@ For the parity-$`N`$ Legendre family, all onsite entries vanish and the positive
 Write the stable-factor zeros as $`z_j`$ and put
 
 ```math
-c=-\sum_{j=1}^N\operatorname{Im}z_j>0.
+c=-\sum_{j=1}^N\Im z_j>0.
 ```
 
 The coefficient of $`z^{N-1}`$ in $`d`$ is $`-L\sum_jz_j`$, so

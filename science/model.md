@@ -66,7 +66,7 @@ The resolvent identity $`G-G^\dagger=-iGVV^\dagger G^\dagger`$ gives $`SS^\dagge
 Every pole of $`G`$ lies strictly below the real axis. If $`H_{\mathrm{eff}}v=zv`$, then
 
 ```math
-\operatorname{Im}z\,\|v\|^2
+\Im z\,\|v\|^2
 =-\tfrac12(\Gamma_L|v_1|^2+\Gamma_R|v_N|^2).
 ```
 
@@ -105,7 +105,7 @@ Let $`K_t`$ count particles transferred into the drain during a stationary obser
 ```math
 J=\lim_{t\to\infty}\frac{\mathbb E K_t}{t},
 \qquad
-D=\lim_{t\to\infty}\frac{\operatorname{Var}K_t}{t},
+D=\lim_{t\to\infty}\frac{\mathrm{Var}K_t}{t},
 \qquad
 F=\frac{D}{J}.
 ```
