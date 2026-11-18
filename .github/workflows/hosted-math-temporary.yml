@@ -1,0 +1,68 @@
+name: Temporary pinned hosted mathematics
+
+on:
+  push:
+    branches:
+      - 'merlin/transport-hosted-verification'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: temporary-hosted-math-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      SCIENCE_REVISION: 3da5a7101412aafa414bdc6bbea9357da4f6efe9
+    steps:
+      - name: Check out the temporary collector branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          path: collector-source
+          persist-credentials: false
+
+      - name: Check out the pinned scientific source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.SCIENCE_REVISION }}
+          path: science-source
+          persist-credentials: false
+
+      - name: Verify the source and canonical collector buffers
+        run: |
+          test "$(git -C science-source rev-parse HEAD)" = "$SCIENCE_REVISION"
+          test "$(git -C collector-source hash-object verification/hosted_math/capture_hosted_math.cjs)" = 6f36ee03223a82d0075da2fe903f21bc5a45a75b
+          test "$(git -C collector-source hash-object verification/hosted_math/check_rendered_math.py)" = 1d3bf9810d0dfadb844a48b354af80f9b66924bc
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+
+      - name: Install the capture runtime
+        run: |
+          npm install --prefix "$RUNNER_TEMP/math-runtime" playwright@1.56.1 mathjax-full@3.2.1
+          node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install --with-deps chromium
+
+      - name: Compare every hosted mathematical expression
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
+          node collector-source/verification/hosted_math/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE/science-source" \
+            --repository "$GITHUB_REPOSITORY" \
+            --revision "$SCIENCE_REVISION" \
+            --output "$RUNNER_TEMP/hosted-math"
+
+      - name: Retain actual captures and comparison report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: hosted-math-${{ env.SCIENCE_REVISION }}
+          path: ${{ runner.temp }}/hosted-math
+          if-no-files-found: error
+          retention-days: 14
