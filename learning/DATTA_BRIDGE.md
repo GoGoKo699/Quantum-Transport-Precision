@@ -2,7 +2,7 @@
 
 The textbook anchor is **Supriyo Datta, *Electronic Transport in Mesoscopic Systems*, Cambridge University Press, 1995**: [official book and chapter listing](https://www.cambridge.org/core/books/electronic-transport-in-mesoscopic-systems/1E55DEF5978AA7B843FF70337C220D8B/listing), [book DOI](https://doi.org/10.1017/CBO9780511805776). Cambridge records the print publication as 14 September 1995 and the online publication as 5 June 2013. The latter date does not identify a different edition.
 
-The connection is a chain of physical and mathematical descriptions. A finite Hamiltonian determines a retarded Green function; the Green function determines transmission; transmission determines the mean current and its counting fluctuations. Serial geometry then constrains the transmission strongly enough to prove a size-dependent noise bound. Passive synthesis constructs a chain attaining that bound in order, while a reflection sum rule accounts for the required contact strength.
+The connection is a chain of physical and mathematical descriptions. A finite Hamiltonian determines a retarded Green function; the Green function determines transmission; transmission determines the mean current and its counting fluctuations. Serial geometry then constrains the transmission strongly enough to prove a size-dependent noise bound. Passive synthesis constructs chains that attain the size law, while a reflection sum rule accounts for the required contact strength. A shift of two Chebyshev roots produces a profile that attains the leading current allowed by that budget across a range of noise ceilings.
 
 ## 1. Where the textbook connects
 
@@ -332,10 +332,42 @@ J_N\sim\frac{\Gamma}{3\log N},
 \qquad F_N=\Theta(N^{-2}).
 ```
 
-The logarithmic current cost is necessary in order and attained in order. The coefficient three is a property of this construction; an optimal leading coefficient or a complete joint frontier is not established.
+The Legendre coefficient three reflects this construction's contact cost. The contact bound at inverse-square noise permits a coefficient of one half in $`J_N\log N/\Gamma`$.
 
-## 10. How the bridge fits the milestone map
+<a id="fixed-contact-frontier"></a>
 
-The [background milestones M01–M14](MILESTONES.md#m01) connect the physical objects, transmission and counting conventions, and the polynomial, Legendre, Cayley, and Krylov tools to the integrated model. The [research narrative M15–M30](MILESTONES.md#m15) follows the converse, upper family, endpoint realization, contact constraint, root asymptotic, and their combined physical meaning. The model assumptions remain attached to every stage: a connected noninteracting serial chain, flat contacts, exactly full/empty occupations, and a long-time counting limit at finite size.
+## 10. Two shifted roots reach the fixed-contact frontier
 
-The resulting claim concerns the optimal size exponent and the order of its current cost. It does not assign that exponent to arbitrary coherent networks, interacting devices, finite bias windows, or independent-tick models.
+To see the remaining design freedom, write $`C_N(x)=\cos(N\arccos x)`$ on $`[-1,1]`$ for the first-kind Chebyshev polynomial, and let $`r_N=\cos(\pi/(2N))`$. The outermost zeros are $`\pm r_N`$. Fix a positive amplitude $`a`$ with $`a\ge1/N`$. Replacing those two zeros moves them toward the center and gives the polynomial
+
+```math
+p_{N,a}(x)=aC_N(x)\frac{x^2-r_N^2+1/(aN^2)}{x^2-r_N^2}.
+```
+
+The denominator cancels two factors of $`C_N`$. For sufficiently large $`N`$, the new roots are real, the other roots stay in place, and the degree is still $`N`$. Apply the same synthesis as in Section 8 to $`T=1/(1+p_{N,a}^2)`$. Parity gives zero onsite energies, and the two contacts have a common rate. Real reflection zeros make the matching-area bound an equality for this realization.
+
+The two parts of the profile serve different purposes. The amplitude $`a`$ controls the interior reflection level. The shift adds a term concentrated near the band edges, with squared integral $`O(N^{-2})`$ across the band. Outside the band, the hyperbolic form $`C_N(\cosh t)=\cosh(Nt)`$ controls the transmission and matching-area tails. The [proof](../science/fixed_contact_frontier.md) gives
+
+```math
+\begin{aligned}
+I_0 &= 2+O(a^2+N^{-2}),\\
+F &= O(a^2+N^{-2}),\\
+\mathcal A &= 4\log(1/a)+O(1).
+\end{aligned}
+```
+
+The matching area uses a logarithm. Factoring the polynomial makes the amplitude contribution explicit: $`-2\log a`$ integrated across a band of length two gives $`4\log(1/a)`$. The log integrals of the oscillation and the moved roots stay bounded. Because $`\mathcal A=2\pi\Gamma_{N,a}`$ before rescaling, the common rescaling to physical rate $`\Gamma`$ gives
+
+```math
+\frac{J}{\Gamma}=\frac{I_0}{\mathcal A}\sim\frac1{2\log(1/a)}.
+```
+
+Given a vanishing ceiling $`f_N\ge C/N^2`$, choose $`a`$ to be a sufficiently small fixed multiple of $`\sqrt{f_N}`$. The fixed constant $`C`$ can be chosen large enough to allow $`a\ge1/N`$ and $`F\le f_N`$ together. The current then satisfies $`J\sim\Gamma/\log(1/f_N)`$. The function $`g(F)=\log(1/F)/(1-F)`$ decreases with $`F`$, so the contact converse at $`f_N`$ supplies the matching leading upper bound for every chain with $`F\le f_N`$.
+
+At $`a=1/N`$, the universal size converse gives $`F=\Theta(N^{-2})`$ and this construction gives $`J\sim\Gamma/(2\log N)`$, compared with the Legendre family's $`\Gamma/(3\log N)`$. The exact minimum-noise prefactor remains open.
+
+## 11. How the bridge fits the milestone map
+
+The [background milestones M01–M14](MILESTONES.md#m01) connect the physical objects, transmission and counting conventions, and the polynomial, Cayley, and Krylov tools to the integrated model. The [research narrative M15–M30](MILESTONES.md#m15) follows the universal noise bound, exact endpoint realization, Legendre baseline, and shifted-root construction. Its last milestones explain how a noise ceiling determines the best leading current under the fixed-contact budget.
+
+The results concern connected noninteracting serial chains, flat contacts, exactly full and empty occupations, and the long-time counting limit at each finite size. Finite bias, interacting devices, general networks, and size-dependent observation times require different analyses.

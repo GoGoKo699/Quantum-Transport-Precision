@@ -131,6 +131,21 @@ def synthesize_chain(n: int, dps: int = 90) -> dict:
     with mp.workdps(dps):
         p = [mp.mpf(c.numerator) / c.denominator
              for c in reflection_power_coefficients(n)]
+        return synthesize_polynomial_chain(p, initial_roots, dps=dps)
+
+
+def synthesize_polynomial_chain(p, initial_roots, *, dps: int = 90) -> dict:
+    """Realize a reflection polynomial from coefficients and seeds for p=i.
+
+    Coefficients are in ascending power order and should already have the
+    requested precision. The complex root seeds can be double precision.
+    """
+    n = len(p) - 1
+    _validate_n(n)
+    if dps < 40 or p[-1] <= 0 or len(initial_roots) != n:
+        raise ValueError("require positive leading coefficient and N root seeds at >=40 digits")
+
+    with mp.workdps(dps):
         dp = _mp_derivative(p)
         tolerance = mp.power(10, -dps + 12)
         roots = []

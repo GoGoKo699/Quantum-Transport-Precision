@@ -24,6 +24,7 @@ The last command recomputes the numerical checks, compares the current and noise
 | Full-line polynomial integrals and contact area | [check_filters.py](check_filters.py) | $`N=1,2,3,4,6,8,12,16,32,64,128`$ | Current, count noise, finite analytical bounds, and the contact-rate constraint |
 | Direct Green-function integration | [check_filters.py](check_filters.py) | $`N=1,4,16`$ | Integrated physical transmission agrees with the target polynomial integrals |
 | Refined quadrature | [check_filters.py](check_filters.py) | $`N=32,128`$ | Stability when tightening tolerances in the narrow edge layer |
+| Fixed-contact frontier | [check_frontier.py](check_frontier.py) | Two noise budgets through $`N=512`$, twelve physical chains | Full-line current, noise and matching area for shifted Chebyshev roots, with independent Green-function integration at unit physical contact rate |
 | Full fermionic counting dynamics | [check_counting.py](check_counting.py) | Eight cases with $`1\leq N\leq4`$ | Lindblad current and noise agree with scattering integrals and covariance current |
 | Figure reproduction | [plot_results.py](plot_results.py) | Committed quadrature rows | The displayed curves follow the stored data and stated analytical formulas |
 
@@ -91,11 +92,26 @@ Selected values from the constructed family are:
 
 The analytical proofs establish the inverse-square order and logarithmic rate cost. The numerical values above do not determine an optimal leading Fano constant.
 
+## Fixed-contact frontier
+
+[The shifted-Chebyshev filter](../science/fixed_contact_frontier.md) replaces the two outer reflection roots and preserves the degree and parity. [frontier_filters.py](frontier_filters.py) evaluates the in-band quotient through trigonometric differences and integrates the out-of-band terms on the infinite scaled half-line. The real-root logarithmic potential accounts analytically for the singularities in the matching area.
+
+[check_frontier.py](check_frontier.py) evaluates amplitudes $`a_N=1/N`$ and $`a_N=1/\sqrt N`$ at twelve sizes from $`4`$ to $`512`$. The numerical cases meet the respective noise ceilings $`4/N^2`$ and $`1/N`$. Those finite checks use the stated coefficients. The analytical frontier theorem uses a sufficiently large constant in its inverse-square ceiling.
+
+| $`N`$ | $`N^2 F`$ at $`a_N=1/N`$ | $`J\log( N^2/4 )/\Gamma`$ | $`NF`$ at $`a_N=1/\sqrt N`$ | $`J\log N/\Gamma`$ |
+|---:|---:|---:|---:|---:|
+| 32 | 2.8100 | 0.6546 | 0.5102 | 0.6970 |
+| 128 | 3.4068 | 0.7464 | 0.5072 | 0.7736 |
+| 512 | 3.6608 | 0.7990 | 0.5029 | 0.8172 |
+
+The current columns use the stated noise ceilings and approach one according to the analytical result. Quadrature is repeated with tighter tolerances at $`N=128,512`$. For both amplitudes and $`N=4,5,8,9,12,13`$, the independent spectral-factor realization gives exactly $`N`$ sites with equal contacts. The matching-area rate and physical rates agree within $`9\times10^{-16}`$. After rescaling to unit physical contact rate, the integrated Green-function current and Fano factor each agree with the filter prediction within $`3\times10^{-16}`$ in this run.
+
 ## Individual commands and result regeneration
 
 ```bash
 .venv/bin/python verification/check_filters.py
 .venv/bin/python verification/check_counting.py
+.venv/bin/python verification/check_frontier.py
 .venv/bin/python verification/plot_results.py
 ```
 
@@ -111,4 +127,3 @@ To deliberately regenerate the numerical records after reviewing a scientific or
 ```
 
 The complete check also verifies the stored observables against newly computed values. Basic source checks do not certify hosted mathematical rendering. The numerical suite does not prove the theorems, test finite-temperature or interacting extensions, establish a transient crossover law, or certify physical robustness against control errors.
-

@@ -397,7 +397,7 @@ The second relation follows from (7), the all-real reflection zeros of the [symm
 \sim\frac{1}{3\log N}.
 ```
 
-Rescaling all energies and rates to a fixed endpoint rate $`\Gamma`$ leaves $`F_N`$ unchanged and gives $`J_N\sim\Gamma/(3\log N)`$. The necessary and attained logarithmic orders match. The coefficients $`1/2`$ in (12) and $`1/3`$ for this family differ, so these results do not determine an exact optimal current-precision frontier.
+Rescaling all energies and rates to a fixed endpoint rate $`\Gamma`$ leaves $`F_N`$ unchanged and gives $`J_N\sim\Gamma/(3\log N)`$ for the Legendre family. The [shifted Chebyshev construction](fixed_contact_frontier.md) attains the leading coefficient $`1/2`$ in (12) and matches (10) to leading order for vanishing noise ceilings above a sufficiently large multiple of $`N^{-2}`$.
 
 ## One-site check
 

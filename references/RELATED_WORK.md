@@ -17,7 +17,7 @@ J\,\frac{\log(1/F)}{1-F}
 \le\min(\Gamma_L,\Gamma_R)
 ```
 
-and an explicit family attaining the required logarithmic growth of contact rate relative to current in order. The comparisons below identify where each inherited ingredient enters and what the cited results establish. Bibliographic records are collected in [references.bib](references.bib).
+The [shifted Chebyshev construction](../science/fixed_contact_frontier.md) now matches the leading contact-limited current over vanishing noise ceilings above a sufficiently large multiple of $`N^{-2}`$. The comparisons below identify where each inherited ingredient enters and what the cited results establish. Bibliographic records are collected in [references.bib](references.bib).
 
 <a id="counting-statistics"></a>
 
@@ -155,7 +155,7 @@ The [contact-rate proof](../science/contact_rate.md) uses this inherited pole/ze
 
 The transport consequence comes from weighting energy by $`T(E)/\int T`$ and applying convexity of $`g(r)=-\log r/(1-r)`$ to $`r=1-T(E)`$. Its weighted average is $`F`$, yielding the stated inequality between $`J`$, $`F`$, and the contact rates. Both the reflection-budget lineage and the convexity step are explicit; the inequality is not presented as a new broadband matching principle.
 
-At fixed endpoint rate, the inequality requires at least logarithmic current suppression when $`F\to0`$. For the least-squares family, $`F=\Theta(N^{-2})`$ and $`\Gamma/J\sim3\log N`$. This matches the necessary order of the current cost. It does not establish the optimal leading constant or a complete joint size-current-noise frontier.
+At fixed endpoint rate, the inequality requires at least logarithmic current suppression when $`F\to0`$. The least-squares family gives $`\Gamma/J\sim3\log N`$ at inverse-square noise. The shifted Chebyshev family lowers this to $`2\log N`$, matching the converse. First-kind Chebyshev polynomials and the synthesis are standard. The transport step is the inward shift of two reflection zeros, which separates the scale of the passband reflection from the edge scale while retaining the real zeros required for exact contact accounting.
 
 ### Related quantum-interface matching result
 

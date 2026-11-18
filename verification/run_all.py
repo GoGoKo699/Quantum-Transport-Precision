@@ -9,6 +9,7 @@ import re
 
 from check_counting import run_checks as counting_checks
 from check_filters import run_checks as filter_checks
+from check_frontier import run_checks as frontier_checks
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -73,6 +74,7 @@ def check_documents():
 def main():
     filters = filter_checks()
     counts = counting_checks()
+    frontier = frontier_checks()
     compare_committed(filters, counts)
     documents = check_documents()
     print(json.dumps({
@@ -82,6 +84,9 @@ def main():
         "full_lindblad_cases": len(counts["cases"]),
         "maximum_transmission_error": filters["summary"]["maximum_transmission_absolute_error"],
         "maximum_counting_statistics_discrepancy": counts["maximum_statistics_discrepancy"],
+        "frontier_quadrature_cases": len(frontier["quadrature"]),
+        "frontier_physical_cases": len(frontier["physical"]),
+        "frontier_maximum_absolute_discrepancy": frontier["maximum_absolute_discrepancy"],
         "committed_observables_reproduced": True,
         "documents": documents,
         "scope": "Finite numerical and source-structure checks; not a proof or a hosted-rendering inspection.",
@@ -90,4 +95,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
