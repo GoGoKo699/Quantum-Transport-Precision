@@ -47,7 +47,7 @@ C=\Gamma_L\Gamma_R\prod_{j=1}^{N-1}|t_j|^2>0.
 For $`N=1`$, the product is one and both contact contributions act on the same orbital. The endpoint-to-endpoint cofactor of a Jacobi matrix is independent of energy. Thus
 
 ```math
-T(E)=\frac{C}{|\chi_N(E)|^2},\qquad 0<T(E)\leq 1.
+T(E)=\frac{C}{|\chi_N(E)|^2},\qquad 0\lt T(E)\leq 1.
 ```
 
 The denominator has no real zero. This follows from the strict lower-half-plane location of all damped-chain eigenvalues, proved in [the contact-rate analysis](contact_rate.md#location-and-sums-of-the-roots). Unitarity supplies the upper bound on transmission.
@@ -75,15 +75,15 @@ The proof below uses only these polynomial facts. In particular, it does not req
 The classical [Markov polynomial inequality](../references/RELATED_WORK.md#markov) states that a real polynomial $`f`$ of degree at most $`m`$ obeys
 
 ```math
-\|f'\|_{\infty,[-1,1]}\leq
-m^2\|f\|_{\infty,[-1,1]}.
+\lVert f'\rVert_{\infty,[-1,1]}\leq
+m^2\lVert f\rVert_{\infty,[-1,1]}.
 ```
 
 Rescaling to an interval $`[a,b]`$ of length $`\ell=b-a>0`$ gives
 
 ```math
-\|f'\|_{\infty,[a,b]}
-\leq \frac{2m^2}{\ell}\|f\|_{\infty,[a,b]}.
+\lVert f'\rVert_{\infty,[a,b]}
+\leq \frac{2m^2}{\ell}\lVert f\rVert_{\infty,[a,b]}.
 ```
 
 Consider the half-transmission set
@@ -164,7 +164,7 @@ On $`S`$, transmission is at most one, so
 \int_S T(E)\,dE\leq L.
 ```
 
-On its complement, $`q>1`$ and $`T<1/2`$. Hence
+On its complement, $`q>1`$ and $`T\lt 1/2`$. Hence
 
 ```math
 T(E)[1-T(E)]\geq\frac12T(E)

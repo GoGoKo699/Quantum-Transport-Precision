@@ -180,7 +180,7 @@ Every dependency names an earlier milestone. The records describe conceptual und
 
 **Central question:** What does a fixed polynomial degree prevent a transmission denominator from doing?
 
-**Understanding target:** Understand Markov's derivative inequality $`\|u'\|_{[-1,1]}\leq m^2\|u\|_{[-1,1]}`$ and how its scale changes on an interval of length $`\ell`$. Relate the degree to a limit on how rapidly a bounded polynomial can vary near an interval endpoint, while keeping this classical approximation-theory statement separate from the physical dynamics.
+**Understanding target:** Understand Markov's derivative inequality $`\lVert u'\rVert_{[-1,1]}\leq m^2\lVert u\rVert_{[-1,1]}`$ and how its scale changes on an interval of length $`\ell`$. Relate the degree to a limit on how rapidly a bounded polynomial can vary near an interval endpoint, while keeping this classical approximation-theory statement separate from the physical dynamics.
 
 **Dependencies:** M09.
 
@@ -326,7 +326,7 @@ Every dependency names an earlier milestone. The records describe conceptual und
 
 **Central question:** How does unavoidable noise in conducting regions constrain the full energy-integrated ratio?
 
-**Understanding target:** Explain why the complement, where $`T<1/2`$, contributes at least half as much noise as current, giving $`I_0\leq L+2V_0`$. Combine this with the conducting-width estimate to understand $`F\geq1/(18N^2+2)`$ for arbitrary admissible onsite energies, hoppings, and contacts, including spectra with no interval above half transmission.
+**Understanding target:** Explain why the complement, where $`T\lt 1/2`$, contributes at least half as much noise as current, giving $`I_0\leq L+2V_0`$. Combine this with the conducting-width estimate to understand $`F\geq1/(18N^2+2)`$ for arbitrary admissible onsite energies, hoppings, and contacts, including spectra with no interval above half transmission.
 
 **Dependencies:** M08, M16, M17.
 
@@ -434,7 +434,7 @@ Every dependency names an earlier milestone. The records describe conceptual und
 
 **Central question:** Which physical properties does the constructed chain have, and what theorem does its existence complete?
 
-**Understanding target:** Explain how parity gives zero onsite energies and equal endpoint spectral measures give mirror symmetry. For the passive realization's contact vectors $`b_\alpha`$, track $`\Gamma_\alpha=2\|b_\alpha\|^2`$ and the equal physical rates determined by the stable poles. Combine the admissible realization with the profile upper bound and universal converse to obtain $`\inf F=\Theta(N^{-2})`$, while leaving optimal constants and the exact finite-size minimizer open.
+**Understanding target:** Explain how parity gives zero onsite energies and equal endpoint spectral measures give mirror symmetry. For the passive realization's contact vectors $`b_\alpha`$, track $`\Gamma_\alpha=2\lVert b_\alpha\rVert^2`$ and the equal physical rates determined by the stable poles. Combine the admissible realization with the profile upper bound and universal converse to obtain $`\inf F=\Theta(N^{-2})`$, while leaving optimal constants and the exact finite-size minimizer open.
 
 **Dependencies:** M05, M14, M18, M20, M23.
 

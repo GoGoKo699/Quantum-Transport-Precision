@@ -34,7 +34,7 @@ D=\frac{V_0}{2\pi},\qquad
 F=\frac{V_0}{I_0}=\frac{D}{J}.
 ```
 
-The integrals are finite, $`I_0>0`$, and $`0<F<1`$. Indeed, transmission is positive everywhere and decays at infinity, so $`0<V_0<I_0`$. A disconnected chain or a vanishing contact instead gives zero transmitted current; its current-normalized Fano factor is undefined and is excluded from the theorem.
+The integrals are finite, $`I_0>0`$, and $`0\lt F\lt 1`$. Indeed, transmission is positive everywhere and decays at infinity, so $`0\lt V_0\lt I_0`$. A disconnected chain or a vanishing contact instead gives zero transmitted current; its current-normalized Fano factor is undefined and is excluded from the theorem.
 
 ## Transmission and reflection determinants
 
@@ -121,7 +121,7 @@ Let $`\zeta_1,\ldots,\zeta_N`$ be the roots of $`\chi_N`$, counted with algebrai
 ```math
 \Im \zeta
 =-\frac{\Gamma_L|v_1|^2+\Gamma_R|v_N|^2}
-{2\|v\|^2}.
+{2\lVert v\rVert^2}.
 ```
 
 If the imaginary part were zero, both endpoint components would vanish. The eigenvalue equation at the first site would then force $`v_2=0`$, and the nonzero nearest-neighbor hoppings would propagate this conclusion through the chain. This contradicts $`v\neq0`$. For $`N=1`$, the same displayed formula is directly strictly negative. Therefore every root lies strictly in the lower half-plane, and the resolvent is well defined on the real axis.
@@ -304,7 +304,7 @@ and the random variable $`X(E)=1-T(E)`$. Its mean is the Fano factor:
 =F.
 ```
 
-For $`0<x<1`$, define
+For $`0\lt x\lt 1`$, define
 
 ```math
 g(x)=\frac{-\log x}{1-x}
@@ -316,7 +316,7 @@ Differentiating under the finite $`t`$ integral at any $`x>0`$ gives
 
 ```math
 g'(x)=-\int_0^1
-\frac{1-t}{[x+(1-x)t]^2}\,dt<0,
+\frac{1-t}{[x+(1-x)t]^2}\,dt\lt 0,
 ```
 
 ```math
@@ -359,7 +359,7 @@ For any finite connected chain, transmission is nonconstant, and the probability
 
 ## Consequences for physical resources
 
-For a prescribed target $`0<\varepsilon<1`$, achieving $`F\leq\varepsilon`$ requires, by monotonicity of $`g`$,
+For a prescribed target $`0<\varepsilon\lt 1`$, achieving $`F\leq\varepsilon`$ requires, by monotonicity of $`g`$,
 
 ```math
 \frac{J}{\Gamma_{\min}}

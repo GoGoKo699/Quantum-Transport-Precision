@@ -4,7 +4,7 @@ A chain can retain inverse-square particle-count noise while carrying more curre
 
 ## 1. The leading current at a prescribed noise ceiling
 
-Use the [serial-chain model](model.md) with a filled source, an empty drain and equal wide-band physical contact rates $`\Gamma_L=\Gamma_R=\Gamma`$. Count particles for long times at each finite chain length $`N`$. Write $`J`$ for the mean current and $`F`$ for the count-variance rate divided by that current. For a noise ceiling $`0<f<1`$, let $`J_N^\star(f;\Gamma)`$ be the supremum of $`J`$ over connected $`N`$-site chains at these rates with $`F\le f`$.
+Use the [serial-chain model](model.md) with a filled source, an empty drain and equal wide-band physical contact rates $`\Gamma_L=\Gamma_R=\Gamma`$. Count particles for long times at each finite chain length $`N`$. Write $`J`$ for the mean current and $`F`$ for the count-variance rate divided by that current. For a noise ceiling $`0\lt f\lt 1`$, let $`J_N^\star(f;\Gamma)`$ be the supremum of $`J`$ over connected $`N`$-site chains at these rates with $`F\le f`$.
 
 **Theorem.** There is an absolute constant $`C>0`$ such that for every sequence $`f_N\to0`$ with $`f_N\ge C/N^2`$ for all sufficiently large $`N`$,
 
@@ -61,7 +61,7 @@ p(x)=a C_N(x)+q_N(x),\qquad
 q_N(x)=\frac{C_N(x)}{N^2(x^2-r_N^2)}.
 ```
 
-For $`0\le x\le1`$ the bound $`|C_N(x)|\le1`$ and the derivative estimate $`\|C_N'\|_{[-1,1]}\le N^2`$, applied from the zero at $`r_N`$, give
+For $`0\le x\le1`$ the bound $`|C_N(x)|\le1`$ and the derivative estimate $`\lVert C_N'\rVert_{[-1,1]}\le N^2`$, applied from the zero at $`r_N`$, give
 
 ```math
 |q_N(x)|

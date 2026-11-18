@@ -125,7 +125,7 @@ A. A. Markov, *Ob odnom voprose D. I. Mendeleeva* [*On a question by D. I. Mende
 For a polynomial $`u`$ of degree at most $`m`$,
 
 ```math
-\|u'\|_{[-1,1]}\le m^2\|u\|_{[-1,1]}.
+\lVert u'\rVert_{[-1,1]}\le m^2\lVert u\rVert_{[-1,1]}.
 ```
 
 The [lower-bound proof](../science/size_bound.md) applies this established inequality separately to every component of a sublevel set of the nonnegative degree-$`2N`$ polynomial $`q=1/T-1`$. It converts a derivative bound into a lower bound on integrated partition noise. The classical inequality itself is not new, and its $`m^2`$ endpoint scale explains the attainable quadratic size exponent.
