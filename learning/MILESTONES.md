@@ -1,6 +1,6 @@
 # Project milestones
 
-This map contains exactly 30 understanding targets for Quantum Transport Precision. The first 14 milestones form the **background/preliminaries** phase. They progress from particle counts and individual orbitals to the complete transport model and the mathematical tools needed to analyze it. The remaining 16 form the **narrative/innovation** phase. They assemble the universal size converse, an exactly realizable attaining family, the contact-current constraint, and their physical meaning.
+This map contains exactly 30 understanding targets for Quantum Transport Precision. The first 14 milestones form the **background/preliminaries** phase. They progress from particle counts and individual orbitals to the complete transport model and the mathematical tools needed to analyze it. The remaining 16 form the **narrative/innovation** phase. They assemble the universal size converse, the exactly realizable Legendre baseline, the contact-current constraint, and the construction that attains it to leading order.
 
 The 14/16 allocation reflects the project's connection between mesoscopic transport, polynomial approximation, and passive realization. Each phase ends with a synthesis milestone: [M14](#m14) integrates the model and resources; [M30](#m30) integrates the claims, attribution, scope, and evidence. The map identifies the load-bearing ideas needed for global understanding; specialist details remain in the canonical proofs.
 
@@ -482,75 +482,74 @@ Every dependency names an earlier milestone. The records describe conceptual und
 
 <a id="m27"></a>
 
-### M27: Sturm and Poincare control of angular root spacing
+### M27: The Legendre baseline at fixed contacts
 
 **Phase:** narrative/innovation.
 
-**Central question:** How can the Legendre reflection roots be controlled uniformly across the entire passband?
+**Central question:** What throughput does the first inverse-square-noise construction sustain at fixed contact rates?
 
-**Understanding target:** Understand the angular substitution $`x=\cos\theta`$ and the transformed Jacobi equation as a way to bound every nodal gap by a Dirichlet Poincare argument. Explain why the singular endpoints still permit integration by parts and how the resulting angular grid estimate controls all roots, including those near the band edges.
+**Understanding target:** Explain how angular root spacing controls the Legendre filter's integrated log reflection. Its normalized transmitted area tends to two, while its matching area is $`6\log N+O(1)`$. The real reflection zeros make this area exactly $`2\pi\Gamma_N`$, so fixing the common physical rate to $`\Gamma`$ gives $`J_N\sim\Gamma/(3\log N)`$. At $`F_N=\Theta(N^{-2})`$, the contact converse instead permits a leading coefficient of one half.
 
-**Dependencies:** M11, M19, M25.
+**Dependencies:** M19, M20, M24, M25, M26.
 
-**Story role:** Supplies the global root-distribution control needed to compute the attaining family's contact cost.
+**Story role:** Accounts for the physical cost of the Legendre baseline and identifies the gap in its leading current.
 
-**Conceptual connection:** Connects an orthogonal-polynomial differential equation to a uniform spectral estimate with bounded accumulated error.
+**Conceptual connection:** Connects polynomial root spacing to a rate budget and gives a benchmark for a new construction at the same noise order.
 
-**Source pointers:** Local: [Legendre family, root-spacing estimate](../science/legendre_family.md#4-a-self-contained-root-spacing-estimate). The Sturm, endpoint-integrability, and Poincare steps are supplied in that proof.
+**Source pointers:** Local: [Legendre root spacing](../science/legendre_family.md#4-a-self-contained-root-spacing-estimate), [matching-area asymptotic](../science/legendre_family.md#5-logarithmic-asymptotic-of-the-matching-area), and [fixed-contact throughput](../science/legendre_family.md#6-charged-throughput-and-limits-of-the-conclusion).
 
 <a id="m28"></a>
 
-### M28: Logarithmic potentials determine the contact-rate asymptotic
+### M28: Moving two Chebyshev roots controls the band edges
 
 **Phase:** narrative/innovation.
 
-**Central question:** Why does the attaining family's contact rate grow logarithmically with the number of sites?
+**Central question:** How can the filter suppress reflection through the band and still shut off transmission outside it?
 
-**Understanding target:** Understand how the leading coefficient of $`p_N`$ and the sum of its root potentials cancel their terms proportional to $`N`$, leaving $`\int_{-1}^1\log|p_N|=-3\log N+O(1)`$. Connect the controlled tails and real reflection zeros to $`\mathcal A_N=6\log N+O(1)`$ and the physical rate $`\Gamma_N=(3/\pi)\log N+O(1)`$.
+**Understanding target:** Start from the first-kind Chebyshev polynomial $`C_N(x)=\cos(N\arccos x)`$ on $`[-1,1]`$. Replacing its outer roots $`\pm r_N`$ by $`\pm\sqrt{r_N^2-1/(aN^2)}`$, where $`r_N=\cos(\pi/(2N))`$ and $`a\ge1/N`$, keeps the polynomial's degree, parity, and real roots for large $`N`$. Understand why the amplitude $`a`$ controls reflection in the band and the correction helps shut off transmission near the edges. The in-band defect is $`O(a^2+N^{-2})`$ after integration, and the out-of-band area is $`O(N^{-2})`$, giving $`F=O(a^2+N^{-2})`$.
 
-**Dependencies:** M20, M24, M25, M27.
+**Dependencies:** M08, M10, M20, M24, M27.
 
-**Story role:** Evaluates the actual contact resource of the constructed chain rather than inferring it from a fixed passband current.
+**Story role:** Supplies the construction that improves throughput while keeping the same physical geometry.
 
-**Conceptual connection:** Connects root distribution, logarithmic matching area, and the physically normalized damping sum.
+**Conceptual connection:** Connects an explicit change to two reflection zeros to both the full-line noise integral and the exact contact accounting in the next step.
 
-**Source pointers:** Local: [Legendre family, matching area](../science/legendre_family.md#3-the-matching-area-determines-the-contact-rate), [logarithmic asymptotic](../science/legendre_family.md#5-logarithmic-asymptotic-of-the-matching-area), and [realization, rate normalization](../science/realization.md#7-spectral-sum-and-the-physical-contact-rate).
+**Source pointers:** Local: [shifted Chebyshev construction and full-line estimates](../science/fixed_contact_frontier.md), [exact chain realization](../science/realization.md).
 
 <a id="m29"></a>
 
-### M29: Fixed-contact throughput and calibrated elapsed time
+### M29: Attaining the current bound at a specified noise ceiling
 
 **Phase:** narrative/innovation.
 
-**Central question:** What precision is obtained when the contact strength is fixed and the output is used to estimate elapsed time?
+**Central question:** How does a realizable filter turn a target noise ceiling into the best leading current at equal fixed contacts?
 
-**Understanding target:** Compare fixed-passband and fixed-contact normalizations, using $`J_N/\Gamma\sim1/(3\log N)`$ after rescaling to equal fixed contacts. For the calibrated estimate $`\widehat t=K_t/J`$, understand $`\mathrm{Var}\widehat t=(F/J)t+o(t)`$ and the constructed coefficient $`F_N/J_N=\Theta(\log N/(\Gamma N^2))`$. Keep the finite-size long-time limit distinct from a size-uniform transient claim.
+**Understanding target:** Factor the shifted profile into a Chebyshev polynomial and the ratio of the old and new root factors. Their integrated log magnitudes contribute bounded corrections, leaving matching area $`4\log(1/a)+O(1)`$. Real roots turn that area into an exact contact rate. After common rescaling, choose $`a`$ proportional to $`\sqrt{f_N}`$ so that $`F\le f_N`$ for $`f_N\to0`$ and $`f_N\ge C/N^2`$ with sufficiently large fixed $`C`$. Use the monotone contact bound to match the resulting leading current $`\Gamma/\log(1/f_N)`$ from above.
 
-**Dependencies:** M01, M08, M14, M26, M28.
+**Dependencies:** M14, M24, M25, M26, M28.
 
-**Story role:** Combines the precision and throughput laws into their physical and timing interpretation.
+**Story role:** Closes the leading-current gap for a range of noise targets.
 
-**Conceptual connection:** Connects relative count fluctuations to an absolute elapsed-time variance coefficient while accounting for the rate cost of producing the counts.
+**Conceptual connection:** Connects a tunable polynomial amplitude, a fixed physical contact rate, and the optimal observable current.
 
-**Source pointers:** Local: [Legendre family, fixed-contact throughput](../science/legendre_family.md#6-charged-throughput-and-limits-of-the-conclusion), [interpretation, contact budget](../science/interpretation.md#3-the-contact-budget-per-transmitted-particle), and [calibrated elapsed-time estimate](../science/interpretation.md#5-relation-to-correlated-clocks).
+**Source pointers:** Local: [fixed-contact frontier and proof](../science/fixed_contact_frontier.md), [contact bound](../science/contact_rate.md#converting-reflection-into-a-fano-factor-bound).
 
 <a id="m30"></a>
 
-### M30: Global synthesis: optimal order, physical scope, attribution, and evidence
+### M30: Synthesis of the size law and fixed-contact frontier
 
 **Phase:** narrative/innovation.
 
-**Central question:** What is established by the complete project, what supplies its proof, and where do its conclusions stop?
+**Central question:** What can a finite serial chain achieve, and which limits still matter?
 
-**Understanding target:** Explain the combined result: optimal $`N^{-2}`$ Fano order for the stated serial class, an exact physical attaining family, a universal contact-current constraint, and an attained logarithmic throughput cost in order. Distinguish inherited transport, filter, polynomial, and synthesis ingredients from the conclusions assembled here; separate analytical proof from finite floating-point checks. Identify the unresolved constants, the unanalysed sensitivity to control errors, and the limits involving finite bias, general networks, interactions, and transient convergence.
+**Understanding target:** Explain the optimal inverse-square Fano order and the optimal leading current $`\Gamma/(2\log N)`$ at that order, a 50% increase over the Legendre baseline. State the threshold on the general noise ceiling and identify the open minimum-noise prefactor. For a known current, connect $`F/J`$ to the long-time variance of the elapsed-time estimate $`K_t/J`$. Distinguish the inherited scattering, approximation, and synthesis tools from the project's results. Describe the finite calculations as checks of the construction, and identify why finite bias, general networks, interacting chains, and transient convergence require fresh analyses.
 
-**Dependencies:** M14, M18, M24, M26, M28, M29.
+**Dependencies:** M01, M14, M18, M24, M27, M29.
 
-**Story role:** Completes the narrative phase by integrating all proof branches into a calibrated account of the scientific contribution.
+**Story role:** Integrates the proof branches, physical resources, and evidence.
 
-**Conceptual connection:** Connects local mechanisms and mathematical certificates to the global claim, its observable meaning, its resource accounting, and the strength of its supporting evidence.
+**Conceptual connection:** Connects the achievable noise and current to a measurement task while keeping the finite-size long-time limit in view.
 
-**Source pointers:** Local: [scientific reading map](../science/README.md), [exact claims](../science/model.md#5-main-statements), [interpretation](../science/interpretation.md), and [verification guide](../verification/README.md). Attribution and comparison: [related work](../references/RELATED_WORK.md).
+**Source pointers:** Local: [exact claims](../science/model.md#5-main-statements), [frontier](../science/fixed_contact_frontier.md), [calibrated elapsed-time estimate](../science/interpretation.md#5-relation-to-correlated-clocks), and [verification guide](../verification/README.md). Attribution and comparison: [related work](../references/RELATED_WORK.md).
 
 Return to the [learning overview](README.md) or the [scientific reading map](../science/README.md).
-

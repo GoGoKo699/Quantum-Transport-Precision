@@ -194,7 +194,7 @@ J\,\frac{\log(1/F)}{1-F}
 
 This follows from a logarithmic reflection sum rule and a convexity step weighted by transmitted current. The [contact-rate proof](contact_rate.md) retains asymmetric rates and fixes the root-integral normalization explicitly.
 
-For the constructed family, with its energy variable normalized to a passband $`[-1,1]`$,
+For the Legendre family, with its energy variable normalized to a passband $`[-1,1]`$,
 
 ```math
 J_N=\frac1\pi+O(N^{-2}),
@@ -211,9 +211,17 @@ J_N\sim\frac{\Gamma}{3\log N},
 F_N=\Theta(N^{-2}).
 ```
 
-Thus the required logarithmic loss of current is attained in order. An optimal leading current constant or a complete joint size-current-noise frontier is not established.
+### Fixed-contact current frontier
+
+Define $`J_N^\star(f;\Gamma)`$ as the supremum of current over connected $`N`$-site chains with $`\Gamma_L=\Gamma_R=\Gamma`$ and $`F\le f`$. The [shifted Chebyshev construction](fixed_contact_frontier.md) establishes
+
+```math
+J_N^\star(f_N;\Gamma)\sim\frac{\Gamma}{\log(1/f_N)}
+```
+
+for every sequence $`f_N\to0`$ with $`f_N\ge C/N^2`$ for a sufficiently large absolute constant $`C`$. At inverse-square noise an explicit chain attains $`J_N\sim\Gamma/(2\log N)`$, the best leading current at that exponent. The smallest feasible noise coefficient and finite-size optimum remain open.
 
 ## Reading route
 
-Continue with the [size bound](size_bound.md), [Legendre family](legendre_family.md), [physical synthesis](realization.md), and [contact-rate bound](contact_rate.md). The [interpretation](interpretation.md) explains the resource consequences and the relation to correlated clocks. The [verification guide](../verification/README.md) separates finite numerical checks from the analytical statements.
+Continue with the [size bound](size_bound.md), [Legendre family](legendre_family.md), [physical synthesis](realization.md), [contact-rate bound](contact_rate.md), and [current frontier](fixed_contact_frontier.md). The [interpretation](interpretation.md) explains the resource consequences and the relation to correlated clocks. The [verification guide](../verification/README.md) separates finite numerical checks from the analytical statements.
 

@@ -6,7 +6,7 @@
 
 The model is a connected, noninteracting N-orbital nearest-neighbor chain with positive energy-independent endpoint rates, a fully occupied source, and an empty drain over the entire real energy axis. The unit convention is hbar = 1. N counts orbitals, not the many-body Hilbert-space dimension 2^N. J is particle current, D is the asymptotic count-variance rate, and F = D/J. Each physical contact rate enters the retarded Hamiltonian as -i Gamma/2.
 
-The proved optimal size order is F_N^star = Theta(N^-2). Every admissible chain satisfies F >= 1/(18N^2+2). The current-noise bound is J log(1/F)/(1-F) <= min(Gamma_L,Gamma_R). An explicit inherited Legendre-derivative filter has an exact N-site realization and, at a fixed common physical contact rate Gamma, attains J_N ~ Gamma/(3 log N). The universal leading constants are not claimed optimal.
+The proved optimal size order is F_N^star = Theta(N^-2). Every admissible chain satisfies F >= 1/(18N^2+2). The current-noise bound is J log(1/F)/(1-F) <= min(Gamma_L,Gamma_R). At a fixed common contact rate Gamma, an explicit shifted Chebyshev family attains the leading current optimum Gamma/log(1/f_N) for any vanishing Fano ceiling f_N >= C/N^2 with sufficiently large constant C. At inverse-square noise it yields J_N ~ Gamma/(2 log N); the Legendre baseline yields Gamma/(3 log N). The minimum inverse-square Fano prefactor remains open.
 
 ## Authoritative scientific sources by intent
 
@@ -17,6 +17,7 @@ The proved optimal size order is F_N^star = Theta(N^-2). Every admissible chain 
 - [Legendre family and asymptotics](science/legendre_family.md): Inherited polynomial family, full-line noise estimate, nodal spacing, logarithmic contact rate, and asymptotic current.
 - [Physical realization](science/realization.md): Stable spectral factor, inner scattering matrix, positive Cayley residues, cyclic Jacobi construction, exact site count, and symmetry.
 - [Contact-rate theorem](science/contact_rate.md): Reflection determinants, logarithmic root integral, asymmetric contact bound, and transmitted-current-weighted Jensen inequality.
+- [Fixed-contact current frontier](science/fixed_contact_frontier.md): Shifted Chebyshev reflection zeros, band and tail controls, contact normalization, and the sharp leading current.
 - [Physical interpretation](science/interpretation.md): Resource rescaling, calibrated elapsed-time estimates, ordered limits, and boundaries of the conclusions.
 
 The science pages are the authority for claims and proofs. Numerical agreement checks the implementation; it does not establish the asymptotic laws. The long-time limit is taken separately at each finite N. The project does not prove an individual waiting-time variance, a size-uniform transient bound, or an extension to general graphs, interactions, structured reservoirs, finite bias, or finite temperature.

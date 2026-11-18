@@ -323,7 +323,7 @@ The contact converse
 J\,\frac{\log(1/F)}{1-F}\leq\min(\Gamma_L,\Gamma_R)
 ```
 
-shows that a logarithmic loss of current is unavoidable for any family with $`F=\Theta(N^{-2})`$ and fixed contact rates. This construction attains that order. Its ratio to the displayed contact bound tends to $`2/3`$, because $`\log(1/F_N)=2\log N+O(1)`$. This is an order-optimal tradeoff, not saturation of the converse constant.
+shows that a logarithmic loss of current is unavoidable for any family with $`F=\Theta(N^{-2})`$ and fixed contact rates. The Legendre current approaches $`2/3`$ of that upper bound because $`\log(1/F_N)=2\log N+O(1)`$. The [shifted Chebyshev family](fixed_contact_frontier.md) closes this gap at leading order.
 
 For $`N=1`$, the exact check is
 

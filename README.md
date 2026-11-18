@@ -19,19 +19,23 @@ J\,\frac{\log(1/F)}{1-F}
 \leq\min(\Gamma_L,\Gamma_R).
 ```
 
-At a fixed common physical contact rate $`\Gamma`$, the construction achieves
+At a fixed common physical contact rate $`\Gamma`$, a chain with shifted Chebyshev reflection zeros achieves the optimal leading current at inverse-square noise,
 
 ```math
 F_N=\Theta(N^{-2}),
 \qquad
-J_N\sim\frac{\Gamma}{3\log N}.
+J_N\sim\frac{\Gamma}{2\log N}.
 ```
 
-Any chain family attaining the inverse-square noise law at bounded contact rates must pay a logarithmic loss of current. The construction attains that order; the leading constants in the general bounds are not claimed to be optimal.
+This is a 50% increase in leading current over the Legendre construction at the same contact rate and noise exponent. For every vanishing noise ceiling $`f_N`$ with $`f_N\ge C/N^2`$ for a sufficiently large constant $`C`$, the [current frontier](science/fixed_contact_frontier.md) is
+
+```math
+J_N^\star(f_N;\Gamma)\sim\frac{\Gamma}{\log(1/f_N)}.
+```
 
 ![Finite-size noise and contact-limited current](science/figures/precision_throughput.svg)
 
-*Left: the constructed Fano factors, the inherited Butterworth benchmark, and rigorous upper and lower bounds on the optimum. Right: the constructed current at unit contact rate, its current-specific contact bound, and the proved asymptotic behavior. The finite data illustrate the analytical results; they are not a fit used to establish the exponent.*
+*Legendre baseline. Left, finite-size Fano factors alongside the Butterworth benchmark and size bounds. Right, the Legendre current and its contact bound. The shifted-root construction closes the leading-current gap visible in the right panel.*
 
 The Legendre-derivative filter is the classical least-squares family of [Malvar and Calôba (1980)](references/RELATED_WORK.md#malvar1980). Scattering theory, polynomial derivative bounds, and lossless matching theory are also established ingredients. The [related-work account](references/RELATED_WORK.md) identifies what each source supplies and compares the resulting transport statements with earlier quantum-dot filters and correlated clocks.
 
@@ -43,9 +47,10 @@ Start with the [model and exact claims](science/model.md), or use the [scientifi
 |---|---|
 | Which physical model and counting convention are used? | [Model, observables, and claims](science/model.md) |
 | Why can no serial chain beat the inverse-square order? | [Universal size bound](science/size_bound.md) |
-| Which filter attains that order, and what is its contact cost? | [Legendre family and asymptotics](science/legendre_family.md) |
+| How does the original filter attain the noise order? | [Legendre family and asymptotics](science/legendre_family.md) |
 | Does the transmission correspond to exactly $`N`$ physical sites? | [Spectral-factor and Jacobi realization](science/realization.md) |
 | How do endpoint rates constrain current at a given noise level? | [Contact-rate theorem](science/contact_rate.md) |
+| Which chains attain the leading current at a prescribed noise ceiling? | [Fixed-contact current frontier](science/fixed_contact_frontier.md) |
 | What changes when bandwidth or contact strength is held fixed? | [Physical interpretation](science/interpretation.md) |
 | Which results and techniques are inherited? | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 | How can the finite checks and figure be reproduced? | [Verification guide](verification/README.md) |
@@ -68,7 +73,7 @@ python3 -m venv .venv
 .venv/bin/python verification/run_all.py
 ```
 
-The calculations compare polynomial transmission with explicitly synthesized chains, evaluate the finite bounds and matching area, and independently obtain current and noise from the full fermionic Lindblad generator for small systems. The [verification guide](verification/README.md) gives the commands, recorded outputs, and the scope of each check.
+The calculations compare polynomial transmission with explicitly synthesized chains, evaluate the full-line current, noise and matching area, and independently obtain current and noise from the full fermionic Lindblad generator for small systems. The [verification guide](verification/README.md) gives the commands, recorded outputs, and the scope of each check.
 
 ## Scope
 
