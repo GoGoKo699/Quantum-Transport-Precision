@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
-      SCIENCE_REVISION: 45ec7d79f8ef5494f86cd546e68b8bac736e9009
+      SCIENCE_REVISION: e183a6f709364ef94f25dadc36777649edd1677d
     steps:
       - name: Check out the temporary collector branch
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
