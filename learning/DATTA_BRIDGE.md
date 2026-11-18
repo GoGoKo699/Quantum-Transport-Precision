@@ -201,7 +201,7 @@ Let $`L`$ be the total length of all such conducting intervals. Their contributi
 V_0\ge\frac{2L}{9m^2}.
 ```
 
-Inside those intervals, transmitted area is at most $`L`$. Outside them, $`T<1/2`$, so $`T\le2T(1-T)`$. Hence
+Inside those intervals, transmitted area is at most $`L`$. Outside them, $`T\lt 1/2`$, so $`T\le2T(1-T)`$. Hence
 
 ```math
 I_0\le L+2V_0
@@ -273,7 +273,7 @@ b_R^{\mathsf T}H_0^k b_L=0,
 \qquad k=0,\ldots,N-2.
 ```
 
-The drain vector is consequently orthogonal to the first $`N-1`$ Lanczos vectors and sits at the last site. This verifies both endpoint support and the exact orbital count. For the parity-$`N`$ polynomial $`p_N`$, the spectral measure is even, giving zero onsite energies; equality of the endpoint measures gives mirror symmetry. The physical rates are $`\Gamma_\alpha=2\|b_\alpha\|^2`$ and are equal.
+The drain vector is consequently orthogonal to the first $`N-1`$ Lanczos vectors and sits at the last site. This verifies both endpoint support and the exact orbital count. For the parity-$`N`$ polynomial $`p_N`$, the spectral measure is even, giving zero onsite energies; equality of the endpoint measures gives mirror symmetry. The physical rates are $`\Gamma_\alpha=2\lVert b_\alpha\rVert^2`$ and are equal.
 
 The [realization proof](../science/realization.md) supplies the pole, residue, and symmetry details. The general [synthesis principles](../references/RELATED_WORK.md#synthesis) are classical; their explicit application certifies the geometry and resource count needed for this theorem.
 

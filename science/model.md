@@ -61,12 +61,12 @@ To see unitarity directly, put $`V=(\sqrt{\Gamma_L}|1\rangle,\sqrt{\Gamma_R}|N\r
 S(E)=I_2-iV^\dagger G(E)V.
 ```
 
-The resolvent identity $`G-G^\dagger=-iGVV^\dagger G^\dagger`$ gives $`SS^\dagger=I_2`$ on the real axis. Consequently $`0<T(E)\le1`$ for a connected chain.
+The resolvent identity $`G-G^\dagger=-iGVV^\dagger G^\dagger`$ gives $`SS^\dagger=I_2`$ on the real axis. Consequently $`0\lt T(E)\le1`$ for a connected chain.
 
 Every pole of $`G`$ lies strictly below the real axis. If $`H_{\mathrm{eff}}v=zv`$, then
 
 ```math
-\Im z\,\|v\|^2
+\Im z\,\lVert v\rVert^2
 =-\tfrac12(\Gamma_L|v_1|^2+\Gamma_R|v_N|^2).
 ```
 
